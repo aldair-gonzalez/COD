@@ -1,0 +1,12 @@
+@use '../imports/mixins' as m;
+@use '../imports/variables';
+
+.pillar {
+    height: 200vh;
+    &__wrapper {}
+    &__header {
+        margin: 0 0 2em;
+    }
+    &__subtitle {}
+    &__desc {}
+}

@@ -1,0 +1,105 @@
+@use '../imports/mixins' as m;
+@use '../imports/variables';
+
+.hero {
+    width: 100%;
+    height: 98vh;
+
+    position: relative;
+
+    &__video {
+        width: 100%;
+        height: 100%;
+    }
+    &__header {
+        background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(255,96,54,0) 25%);
+        width: 100%;
+        height: 100%;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    &__wrapper {
+        height: 95%;
+
+        @include m.flex(row, nowrap, flex-end, space-between);
+        gap: 5vw;
+    }
+    &__logo {
+        width: 25em;
+        overflow: hidden;
+    }
+    &__inf {
+        @include m.flex(column, nowrap, center, center);
+        gap: 1.5em;
+    }
+    &__img {}
+    &__h2 {
+        color: var(--c-amarillo);
+        
+        text-transform: uppercase;
+
+        font: {
+            family: var(--tipo-secundaria);
+            size: 2em;
+        }
+    }
+    &__download {
+        @include m.flex(row, nowrap, center, center);
+        gap: .5em;
+    }
+    &__a {
+        width: 10em;
+    }
+    &__img {}
+    &__button {
+        background-color: var(--c-amarillo);
+        color: var(--c-negro);
+
+        outline: 2px solid var(--c-amarillo);
+        outline-offset: -2px;
+
+        padding: 1.2em 3em;
+
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        font: {
+            size: .9em;
+        }
+
+        transition:
+            background-color .5s ease,
+            color            .5s ease,
+            transform        .5s ease,
+        ;
+
+        &:hover {
+            background-color: var(--c-negro);
+            color: var(--c-amarillo);
+            transform: scale(.95);
+        }
+        &:active {
+            transform: scale(1.05);
+        }
+    }
+
+
+    @include m.media(67.5rem){
+        &__wrapper {
+            @include m.flex(column, nowrap, center, center);
+            gap: 1.5em;
+        }
+    }
+    @include m.media(33.125rem){
+        &__logo {
+            width: 16em;
+        }
+        &__h2 {
+            font-size: 1.5em;
+        }
+        &__a {
+            width: 8em;
+        }
+    }
+}
