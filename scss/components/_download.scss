@@ -1,0 +1,57 @@
+@use '../imports/mixins' as m;
+@use '../imports/variables';
+
+.download {
+    &__wrapper {
+        background-color: white;
+        background-image: url('../../assets/img/download-now-desktop.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        @include m.flex(row, nowrap, center, flex-end);
+    }
+    &__content {
+        width: 50%;
+        padding: 2em;
+
+        @include m.flex(column, nowrap, center, center);
+        gap: 2em;
+
+        overflow: hidden;
+    }
+    &__logo {
+        width: 20em;
+    }
+    &__img {}
+    &__text {
+        color: var(--c-negro);
+        text-transform: uppercase;
+        font: {
+            family: var(--tipo-secundaria);
+            weight: 200;
+            size: 2.5em;
+        }
+    }
+    &__buttons {}
+    &__button {}
+    &__img {}
+
+    @include m.media(53.125rem) {
+        &__content {
+            width: 100%;
+
+            @include m.flex(column, nowrap, flex-end, center);
+        }
+    }
+    @include m.media(43.75rem) {
+        &__content {
+            background-color: rgba($color: #ffffff, $alpha: .3);
+        }
+    }
+    @include m.media(37.5rem) {
+        &__content {
+            @include m.flex(column, nowrap, center, center);
+            font-size: 15px;
+        }
+    }
+}

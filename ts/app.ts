@@ -3,8 +3,6 @@
 
     const controllsSlider = (document.querySelectorAll<HTMLButtonElement>('.multiplay__button'));
     const sliderItems = (document.querySelectorAll<HTMLDivElement>('.multiplay__item'));
-
-    // const characters = (document.querySelectorAll<HTMLDivElement>('.pillar__img'));
     
 
     /* ------------------------------------------------ */
@@ -12,7 +10,7 @@
     /* ------------------------------------------------ */
     function handleScrollHeader(): void {
         const { scrollY } = window;
-        scrollY >= 400 ? header?.classList.add('filter') : header?.classList.remove('filter');
+        scrollY >= 100 ? header?.classList.add('filter') : header?.classList.remove('filter');
     }
 
     window.addEventListener('scroll', handleScrollHeader)

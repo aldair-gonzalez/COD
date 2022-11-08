@@ -1,3 +1,5 @@
+@use './mixins' as m;
+
   @media (prefers-reduced-motion: reduce) {
     * {
       animation: none !important;
@@ -124,4 +126,13 @@
   &__center {
     margin: 0 auto;
   }
+}
+
+.buttons__download {
+  @include m.flex(row, nowrap, center, center);
+  gap: .5em;
+}
+
+.button__download {
+  width: 10em;
 }

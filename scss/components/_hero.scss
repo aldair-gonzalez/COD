@@ -45,13 +45,8 @@
             size: 2em;
         }
     }
-    &__download {
-        @include m.flex(row, nowrap, center, center);
-        gap: .5em;
-    }
-    &__a {
-        width: 10em;
-    }
+    &__download {}
+    &__a {}
     &__img {}
     &__button {
         background-color: var(--c-amarillo);

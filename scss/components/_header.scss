@@ -172,7 +172,7 @@
         @include m.flex(row, nowrap, center, center);
         gap: .5em;
         &:hover {
-            color: var(--c-verde);
+            color: var(--c-blanco);
             .game__svg {
                 transform: rotate(-180deg);
             }

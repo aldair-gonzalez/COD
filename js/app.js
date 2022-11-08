@@ -2,13 +2,12 @@
     var header = (document.querySelector('.header'));
     var controllsSlider = (document.querySelectorAll('.multiplay__button'));
     var sliderItems = (document.querySelectorAll('.multiplay__item'));
-    // const characters = (document.querySelectorAll<HTMLDivElement>('.pillar__img'));
     /* ------------------------------------------------ */
     /* ----------------- Scroll header ---------------- */
     /* ------------------------------------------------ */
     function handleScrollHeader() {
         var scrollY = window.scrollY;
-        scrollY >= 400 ? header === null || header === void 0 ? void 0 : header.classList.add('filter') : header === null || header === void 0 ? void 0 : header.classList.remove('filter');
+        scrollY >= 100 ? header === null || header === void 0 ? void 0 : header.classList.add('filter') : header === null || header === void 0 ? void 0 : header.classList.remove('filter');
     }
     window.addEventListener('scroll', handleScrollHeader);
     /* ------------------------------------------------ */
