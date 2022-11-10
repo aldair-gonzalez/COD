@@ -312,8 +312,6 @@ body {
     opacity: 0;
     pointer-events: none;
     overflow: hidden;
-    -webkit-transition: height 0.5s ease, opacity 0.5s ease;
-    transition: height 0.5s ease, opacity 0.5s ease;
   }
   .header__menu--2 {
     display: -webkit-box;
@@ -332,7 +330,7 @@ body {
     padding: 0.5em 0;
   }
   .header__menu.active {
-    height: 100vh;
+    height: auto;
     opacity: 1;
     pointer-events: auto;
   }
