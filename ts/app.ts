@@ -1,6 +1,9 @@
 ((): void => {
     const header = (document.querySelector<HTMLDivElement>('.header'));
 
+    const menu = (document.querySelector<HTMLDivElement>('.header__menu') as HTMLDivElement);
+    const btnMenu = (document.querySelector<HTMLButtonElement>('.header__btn') as HTMLButtonElement);
+
     const controllsSlider = (document.querySelectorAll<HTMLButtonElement>('.multiplay__button'));
     const sliderItems = (document.querySelectorAll<HTMLDivElement>('.multiplay__item'));
     
@@ -14,6 +17,14 @@
     }
 
     window.addEventListener('scroll', handleScrollHeader)
+
+
+
+    /* ------------------------------------------------ */
+    /* ------------------- Menu movil ----------------- */
+    /* ------------------------------------------------ */
+    btnMenu.addEventListener('click', () => menu?.classList.toggle('active'));
+
 
 
 

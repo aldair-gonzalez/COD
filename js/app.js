@@ -1,5 +1,7 @@
 (function () {
     var header = (document.querySelector('.header'));
+    var menu = document.querySelector('.header__menu');
+    var btnMenu = document.querySelector('.header__btn');
     var controllsSlider = (document.querySelectorAll('.multiplay__button'));
     var sliderItems = (document.querySelectorAll('.multiplay__item'));
     /* ------------------------------------------------ */
@@ -10,6 +12,10 @@
         scrollY >= 100 ? header === null || header === void 0 ? void 0 : header.classList.add('filter') : header === null || header === void 0 ? void 0 : header.classList.remove('filter');
     }
     window.addEventListener('scroll', handleScrollHeader);
+    /* ------------------------------------------------ */
+    /* ------------------- Menu movil ----------------- */
+    /* ------------------------------------------------ */
+    btnMenu.addEventListener('click', function () { return menu === null || menu === void 0 ? void 0 : menu.classList.toggle('active'); });
     /* ------------------------------------------------ */
     /* -------------------- Slider -------------------- */
     /* ------------------------------------------------ */

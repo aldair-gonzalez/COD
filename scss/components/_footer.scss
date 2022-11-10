@@ -97,4 +97,18 @@
             @include m.grid(2, 1em);
         }
     }
+    @include m.media(29.375rem) {
+        &__links {
+            @include m.grid(1, 2em);
+        }
+        &__header {
+            text-align: center
+        }
+        &__ul {
+            @include m.flex(column, nowrap, center, flex-start);
+            &--socialmedia {
+                @include m.flex(row, nowrap, flex-start, center);
+            }
+        }
+    }
 }
