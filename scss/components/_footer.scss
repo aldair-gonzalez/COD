@@ -1,0 +1,100 @@
+@use '../imports/mixins' as m;
+@use '../imports/variables';
+
+.footer {
+    padding: 0 0 6em;
+    background-image: url('../assets/svg/rainbow-lines.svg');
+    background-repeat: no-repeat;
+    background-position: left bottom 1em;
+    background-size: auto 11em;
+    &__wrapper {}
+    &__links {
+        @include m.grid(3, 1em);
+    }
+    &__col {}
+    &__header {
+        padding: 0 0 1em;
+        font: {
+            weight: 600;
+        }
+    }
+    &__ul {
+        color: rgba($color: #fff, $alpha: .7);
+        font: {
+            size: .8em;
+        }
+
+        @include m.flex(column, nowrap, flex-start, flex-start);
+        gap: .5em;
+        
+        &--socialmedia {
+            @include m.flex(row, nowrap, flex-start, flex-start);
+            gap: .5em;
+        }
+    }
+    &__li {}
+    &__a {
+        transition:
+            color     .5s ease,
+        ;
+
+        &--socialicon {
+            position: relative;
+
+            overflow: hidden;
+
+            border-radius: 100%;
+            padding: .5em;
+
+            &::before {
+                content: '';
+                position: absolute;
+                
+                top: 0;
+                left: 0;
+
+                width: 150%;
+
+                box-shadow: 0 0 1em .2em var(--c-blanco);
+
+                transform: rotate(-45deg) translateY(-2em) translateX(-1em);
+
+                transition:
+                    transform .5s ease,
+                ;
+            }
+        }
+
+        &:hover {
+            color: var(--c-amarillo);
+
+            &::before {
+                transform: rotate(-45deg) translateY(3em) translateX(-1em);
+            }
+        }
+    }
+    &__svg {
+        width: 2em;
+        height: 2em;
+    }
+    &__logo {
+        margin: 5vh 0;
+        @include m.flex(column, nowrap, center, center);
+        gap: 1em;
+    }
+    &__span {
+        width: 80%;
+        text-align: center;
+
+        font: {
+            weight: 300;
+            size: .8em;
+        }
+    }
+
+    @include m.media(37.5rem) {
+        &__links {
+            @include m.grid(2, 1em);
+        }
+    }
+}
