@@ -42,7 +42,4 @@
     };
     controllsSlider[0].addEventListener('click', handleControllsSlider.prev);
     controllsSlider[1].addEventListener('click', handleControllsSlider.next);
-    // /* ------------------------------------------------ */
-    // /* ------------------ Characters ------------------ */
-    // /* ------------------------------------------------ */
 })();

@@ -110,5 +110,10 @@
                 @include m.flex(row, nowrap, flex-start, center);
             }
         }
+        &__li {
+            width: 100%;
+            @include m.flex(column, nowrap, center, center);
+            text-align: center;
+        }
     }
 }
